@@ -204,7 +204,6 @@ public class DataLoader implements CommandLineRunner {
     }
 
     private String[] parseCsvLine(String line) {
-        // Simple CSV parser that handles quotes
         return line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
     }
 
@@ -225,9 +224,6 @@ public class DataLoader implements CommandLineRunner {
         }
         return parts;
     }
-
-    // Update methods to use parseCsvLineAndClean
-    // (I'll fix this in the actual code below)
 
     private LocalDate parseDate(String dateStr) {
         if (dateStr == null || dateStr.isEmpty() || "0".equals(dateStr)) return null;
